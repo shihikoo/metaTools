@@ -4,13 +4,17 @@
 \alias{CalculateAUCSD}
 \title{CalculateAUCSD}
 \usage{
-CalculateAUCSD(y, x, ysd = NULL)
+CalculateAUCSD(x, y, ysd = NULL)
 }
 \arguments{
-\item{ysd}{}
+\item{x}{a list of numbers}
+
+\item{y}{a list of numbers matching the number of elements of x}
+
+\item{ysd}{a list of numbers matching the number of elements of x}
 }
 \description{
-Calculate AUC SD
+Calculate standard deviation area under the curve for function y(x)
 }
 \examples{
 x <- c(1,3,7,14)

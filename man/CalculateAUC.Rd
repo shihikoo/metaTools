@@ -4,13 +4,15 @@
 \alias{CalculateAUC}
 \title{CalculateAUC}
 \usage{
-CalculateAUC(y, x)
+CalculateAUC(x, y)
 }
 \arguments{
-\item{x}{}
+\item{x}{a list of numbers}
+
+\item{y}{a list of numbers matching the number of elements of x}
 }
 \description{
-Calculate AUC
+Calculate area under the curve for function y(x)
 }
 \examples{
 x <- c(1,3,7,14)

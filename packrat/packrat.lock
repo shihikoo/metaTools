@@ -59,6 +59,16 @@ Source: CRAN
 Version: 1.5
 Hash: bdc4d48c3135e8f3b399536ddf160df4
 
+Package: meta
+Source: CRAN
+Version: 4.8-4
+Hash: 5e6eae9226989545369fa90b37294810
+
+Package: metafor
+Source: CRAN
+Version: 2.0-0
+Hash: 0f8c6093283f85205ee61dbc4115b62d
+
 Package: packrat
 Source: CRAN
 Version: 0.4.8-1

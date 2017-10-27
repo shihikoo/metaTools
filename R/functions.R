@@ -1,9 +1,9 @@
 #' CalculateAUC
 #'
-#' Calculate AUC
+#' Calculate area under the curve for function y(x)
 #'
-#' @param y
-#' @param x
+#' @param x a list of numbers
+#' @param y a list of numbers matching the number of elements of x
 #'
 #' @return
 #' @export
@@ -15,7 +15,12 @@
 #'
 #' CalculateAUC(y,x)
 #'
-CalculateAUC <- function(y, x){
+CalculateAUC <- function(x, y){
+  if(length(x) != length(y))
+    {
+    print('y and x must have the same dimention')
+    return(NULL)
+}
   dx <- c(diff(x), 0)
   dy <- c(diff(y), 0)
   areas <- y * dx + dy * dx/2
@@ -25,11 +30,11 @@ CalculateAUC <- function(y, x){
 
 #' CalculateAUCSD
 #'
-#' Calculate AUC SD
+#' Calculate standard deviation area under the curve for function y(x)
 #'
-#' @param y
-#' @param x
-#' @param ysd
+#' @param x a list of numbers
+#' @param y a list of numbers matching the number of elements of x
+#' @param ysd a list of numbers matching the number of elements of x
 #'
 #' @return
 #' @export
@@ -41,7 +46,7 @@ CalculateAUC <- function(y, x){
 #'
 #' CalculateAUC(y,x,ysd)
 #'
-CalculateAUCSD <- function(y, x,ysd=NULL){
+CalculateAUCSD <- function(x, y,ysd=NULL){
   dx <- c(diff(x), 0)
   dy <- c(diff(y), 0)
   areas <- y * dx + dy * dx/2
